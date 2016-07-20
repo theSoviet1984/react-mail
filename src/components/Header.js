@@ -1,22 +1,31 @@
 import React from "react";
-
+import {Link } from "react-router";
 export default class Header extends React.Component {
 	render() {
 		const styles = this.getStyles();
 
 		return (
 			<header style={ styles.wrapper }>
-				<div>
-					<img
-						alt="React Logo"
-						src="assets/react-logo.svg"
-						style={ styles.logoImage }
-					/>
-					<h1 style={ styles.header }>rMail</h1>
-				</div>
+					<div>
+						<img
+							alt="React Logo"
+							src="assets/react-logo.svg"
+							style={ styles.logoImage }
+						/>
+						<Link to="/"><h1 style={ styles.header }>rMail</h1></Link>
+					</div>
 
-				<div>
-				</div>
+					<div>
+						<Link to="/inbox">
+							<span style={ styles.link }>Inbox</span>
+						</Link>
+						<Link to="/draft">
+							<span style={ styles.link }>Draft</span>
+						</Link>
+						<Link to="/contacts">
+							<span style={ styles.link }>Contacts</span>
+						</Link>
+					</div>
 			</header>
 		);
 	}

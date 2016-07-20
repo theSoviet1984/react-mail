@@ -137,7 +137,7 @@ export default class Contacts extends React.Component {
 			contacts: []
 		}
 	}
-	
+
 	componentWillMount() {
 		this.setState( { contacts: getContacts() } );
 	}
@@ -225,7 +225,7 @@ export default class Draft extends React.Component {
 
 ## Inbox and MessageLink Components
  The Inbox component will display a list of `MessageLink` components on the left, and its sub-route displaying the message content on the right.
- 
+
 * Display the component's children inside the `div` with the style of `activeMessageWrapper`.
 * Import `getMessages` from `messageService` and put the messages on state before the component mounts using a lifecycle method.
 * Import the `MessageLink` component and create an array of message links.
@@ -251,7 +251,7 @@ export default class Inbox extends React.Component {
 
 		this.state = { messages: [] };
 	}
-	
+
 	componentWillMount() {
 		this.setState( { messages: getMessages() } );
 	}
@@ -293,7 +293,7 @@ export default class Inbox extends React.Component {
 // MessageLink.js - Just the render method JSX
 <div style={ styles.wrapper }>
 	<h3>{ this.props.name }</h3>
-	
+
 	{ this.props.email }
 </div>
 ```
@@ -306,6 +306,7 @@ Our message component will make use of lifecycle methods to ensure its data is u
 * Import `findMessageById` from `messageService`.
 * Create a new method named `getMessage` that takes in a `messageId` parameter, finds a message by ID, and places that message on state.
 * Using a lifecycle method, call your `getMessage` method before the component mounts.
+{{what does calling do here???}}
 * Using a lifecycle method, determine whether the component needs to re-call `getMessage`. Look to the route params to determine this.
 
 Your code should look something like this:
@@ -372,15 +373,15 @@ ___
 
 ### Contributions
 
-#### 
- 
+####
+
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 
 ## Copyright
 
 ### Copyright
 
-#### 
+####
 
 © DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
 
